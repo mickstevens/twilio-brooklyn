@@ -71,8 +71,11 @@ def callctrl():
     return str(resp) 
 
 if __name__ == "__main__":
+    # config the following line to specify the port you wish your app to run on. I'm using nitrous.io so have specified port 3000
+    app.run("0.0.0.0", port = 3000)
+    # type "python brooklyn.py runserver 0:3000" to run the app on port 3000 specified previously 
     # Since this is a development project, we will keep debug on to make our
     # lives easier. We would want to configure our app more conservatively
     # in production.
-    app.debug = False
+    app.debug = True
     app.run()
